@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class EnemyFollowFlower : MonoBehaviour
 {
+    //enemy stats
     public float speed;
     public float attackRange;
-    public float attackCooldown;
+    public int damage;
+    public float attackCooldown = 1f;
+    private float nextFireTime;
+    //reference the flower
     private Transform flower;
+    public GameManager flowerHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +29,11 @@ public class EnemyFollowFlower : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(this.transform.position, flower.position, speed * Time.deltaTime);
         }
-        else if (distanceFromPlayer <= attackRange)
+        else if (distanceFromPlayer <= attackRange && nextFireTime < Time.time)
         {
             //attack once in range, then wait for attack cooldown
+            GameManager.SetHealth(damage);
+            nextFireTime = Time.time + attackCooldown;
         }
     }
 
