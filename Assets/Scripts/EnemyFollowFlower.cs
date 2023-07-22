@@ -32,7 +32,7 @@ public class EnemyFollowFlower : MonoBehaviour
         else if (distanceFromPlayer <= attackRange && nextFireTime < Time.time)
         {
             //attack once in range, then wait for attack cooldown
-            GameManager.SetHealth(damage);
+            //GameManager.SetHealth(damage);
             nextFireTime = Time.time + attackCooldown;
         }
     }
