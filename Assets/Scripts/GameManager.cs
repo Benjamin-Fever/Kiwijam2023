@@ -10,15 +10,20 @@ public class GameManager : MonoBehaviour
     [Header("Health")]
     [SerializeField] private int health = 100;
     [SerializeField] private int maxHealth = 100;
+    [SerializeField] private float statDmgRate = 0.8f;
 
     [Header("Sunlight")]
     [SerializeField] private int sunLevel = 50;
     [SerializeField] private int maxSunLevel = 100;
+    [SerializeField] private float sunLevelDmgMax = 90f;
+    [SerializeField] private float sunLevelDmgMin = 10f;
     [SerializeField] private float sunChangeRate = 0.5f;
 
     [Header("Water")]
     [SerializeField] private int waterLevel = 50;
     [SerializeField] private int maxWaterLevel = 100;
+    [SerializeField] private float waterLevelDmgMax = 90f;
+    [SerializeField] private float waterLevelDmgMin = 10f;
     [SerializeField] private float waterChangeRate = 0.5f;
 
     [Header("Actions")]
@@ -33,6 +38,7 @@ public class GameManager : MonoBehaviour
         manager = this;
         setSunLevelRate(sunChangeRate);
         setWaterLevelRate(waterChangeRate);
+        setStatDmgRate(statDmgRate);
     }
 
     private void Update()
@@ -40,7 +46,6 @@ public class GameManager : MonoBehaviour
         if (health <= 0) gameOver();
 
         minMaxChecks();
-
         changeBar(healthBar, health, maxHealth);
         changeBar(sunBar, sunLevel, maxSunLevel);
         changeBar(waterBar, waterLevel, maxWaterLevel);
@@ -59,6 +64,14 @@ public class GameManager : MonoBehaviour
     private void waterLevelChange()
     {
         waterLevel = action == Actions.Water ? waterLevel + 5 : waterLevel - 1;
+    }
+
+    private void statDmgChange()
+    {
+        if (sunLevel > sunLevelDmgMax || sunLevel < sunLevelDmgMin || waterLevel > waterLevelDmgMax || waterLevel < waterLevelDmgMin)
+        {
+            AddHealth(-3);
+        }
     }
 
     private void changeBar(RectTransform bar, int value, int max)
@@ -120,4 +133,15 @@ public class GameManager : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Change the rate that that damage occurs for having low stats
+    /// </summary>
+    /// <param name="changeRate">The time between each damage tick</param>
+    public void setStatDmgRate(float changeRate)
+    {
+        statDmgRate = changeRate;
+        CancelInvoke(nameof(statDmgChange));
+        InvokeRepeating(nameof(statDmgChange), 0f, waterChangeRate);
+
+    }
 }
