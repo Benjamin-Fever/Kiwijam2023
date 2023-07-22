@@ -8,9 +8,9 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     private Vector2 originalPosition;
     private Vector2 offset;
     private bool isMoving;
-    public RectTransform region;
+    [SerializeField] private GameManager.Actions actionType = GameManager.Actions.None;
+    [SerializeField] private RectTransform region;
 
-    public GameManager.Actions actionType = GameManager.Actions.None;
 
     private void Awake()
     {
@@ -20,24 +20,24 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     private void Update()
     {
+        // Gradually move the item back to its original position
         if (!isMoving)
         {
             imageRectTransform.anchoredPosition = Vector2.Lerp(originalPosition, imageRectTransform.anchoredPosition, 0.95f);
             return;
         }
-
+        // Move the item the players position
+        // TODO: Make compatiable for mobile use!!
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 newPosition = mousePosition - offset;
         imageRectTransform.anchoredPosition = newPosition;
 
-        bool isInsideCanvasItem = RectTransformUtility.RectangleContainsScreenPoint(region, mousePosition);
-
-        if (isInsideCanvasItem)
-        {
+        // Change action type if item is in region
+        if (RectTransformUtility.RectangleContainsScreenPoint(region, mousePosition))
             GameManager.instance.action = actionType;
-        }
     }
 
+    // On mouse click
     public void OnPointerDown(PointerEventData eventData)
     {
         if (eventData.button == InputButton.Left)
@@ -47,6 +47,7 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         }
     }
 
+    // On mouse release
     public void OnPointerUp(PointerEventData eventData)
     {
         if (eventData.button == InputButton.Left)
