@@ -3,7 +3,9 @@ using Unity.Mathematics;
 
 public class GameManager : MonoBehaviour
 {
-    private enum Actions { Blocksun, Attack, Water, None };
+    private static GameManager manager = null;
+    public static GameManager instance { get { return manager; } }
+    public enum Actions { Blocksun, Attack, Water, None };
 
     [Header("Health")]
     [SerializeField] private int health = 100;
@@ -20,8 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float waterChangeRate = 0.5f;
 
     [Header("Actions")]
-    [SerializeField]
-    private Actions action = Actions.None;
+    public Actions action = Actions.None;
 
     [SerializeField] private RectTransform healthBar;
     [SerializeField] private RectTransform sunBar;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        manager = this;
         setSunLevelRate(sunChangeRate);
         setWaterLevelRate(waterChangeRate);
     }
