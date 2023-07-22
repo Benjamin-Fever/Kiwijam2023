@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Unity.Mathematics;
 
 public class GameManager : MonoBehaviour
@@ -39,8 +36,12 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (health <= 0) gameOver();
+
         minMaxChecks();
+
         changeBar(healthBar, health, maxHealth);
+        changeBar(sunBar, sunLevel, maxSunLevel);
+        changeBar(waterBar, waterLevel, maxWaterLevel);
     }
 
     private void gameOver()
@@ -51,13 +52,11 @@ public class GameManager : MonoBehaviour
     private void sunlightChange()
     {
         sunLevel = action == Actions.Blocksun ? sunLevel - 2 : sunLevel + 1;
-        changeBar(sunBar, sunLevel, maxSunLevel);
     }
 
     private void waterLevelChange()
     {
         waterLevel = action == Actions.Water ? waterLevel + 5 : waterLevel - 1;
-        changeBar(waterBar, waterLevel, maxWaterLevel);
     }
 
     private void changeBar(RectTransform bar, int value, int max)
@@ -118,4 +117,5 @@ public class GameManager : MonoBehaviour
         InvokeRepeating(nameof(waterLevelChange), 0f, waterChangeRate);
         
     }
+
 }
