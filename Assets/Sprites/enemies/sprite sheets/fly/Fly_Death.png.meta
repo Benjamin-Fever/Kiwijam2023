@@ -1,0 +1,1073 @@
+fileFormatVersion: 2
+guid: fe8f223e18a1899468b1993e4671c488
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fly_Death_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 7590
+        width: 616
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cffc0c89c0b7a48b926951c79469b3
+      internalID: -2044385349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_1
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 7590
+        width: 616
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305ec50a055e4c044917d228d2f40088
+      internalID: 719627198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_2
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 7786
+        width: 720
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0357349d297ceb94caf9d36be314c4a7
+      internalID: 1705852384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_3
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 7786
+        width: 720
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdc1e80804f61d46aa8b1984996cc06
+      internalID: 619931126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_4
+      rect:
+        serializedVersion: 2
+        x: 4106
+        y: 7402
+        width: 976
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9964097dd53a8f4eb7f8d0c61c10dff
+      internalID: -1271555906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_5
+      rect:
+        serializedVersion: 2
+        x: 5174
+        y: 7402
+        width: 976
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b42129fb5a0aa94996176f44a173dd5
+      internalID: -830065284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_6
+      rect:
+        serializedVersion: 2
+        x: 6242
+        y: 7098
+        width: 1064
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565c741f9679e8743bfa4d412e1745f6
+      internalID: -2103874883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_7
+      rect:
+        serializedVersion: 2
+        x: 2666
+        y: 7682
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b366cc3554bdd4e9887da61b53b680
+      internalID: 1423968257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_8
+      rect:
+        serializedVersion: 2
+        x: 3962
+        y: 7682
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be27bf2607bcf9c4fbb53a8109d4cbe3
+      internalID: -68945620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_9
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 5986
+        width: 1072
+        height: 1020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0fd3b62f481074aba8ee086199b221
+      internalID: -1215500347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_10
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 5966
+        width: 1080
+        height: 1040
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54076149f3439b6449d1370e7870f4ae
+      internalID: -1022829171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_11
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 5962
+        width: 1082
+        height: 1044
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae52d7f1f8679b40b3b5c1a3c35d060
+      internalID: 675008326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_12
+      rect:
+        serializedVersion: 2
+        x: 3602
+        y: 5958
+        width: 1080
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9297a699e718d3428e61156199652b7
+      internalID: -1885308554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_13
+      rect:
+        serializedVersion: 2
+        x: 4774
+        y: 5958
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f262356f717d06418e42890b316f536
+      internalID: 1217299709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_14
+      rect:
+        serializedVersion: 2
+        x: 5950
+        y: 5958
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbec75ab5bd3fa4496f3943a8bacf7d
+      internalID: 1281098936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_15
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 4814
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da727b0912abe940892641798bffd7d
+      internalID: -1471216395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_16
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 4814
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a74ecd7642bfb9408c64842e6c3938a
+      internalID: -848708309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_17
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 4814
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b5664937dfa36419bae8ad399ea070
+      internalID: 1228797051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_18
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 4814
+        width: 1080
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d919a59b9debd7d40b12bc681df8e42d
+      internalID: -1896034943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_19
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 4814
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a878c6b5923dd4248ac984dfeb40ba7b
+      internalID: 1580314213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_20
+      rect:
+        serializedVersion: 2
+        x: 5970
+        y: 4814
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ab8ee2c28b9094c91240ff0d7b0bf8
+      internalID: -1518256190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_21
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 3674
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d864b638a6fcf4ba428236b2ec75f7
+      internalID: -1989021162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_22
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 3674
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d181daff4fd6c424d9481dbd848aee3c
+      internalID: -2041681812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_23
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 3674
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e6c554d467ca94ba2b6163cf7014c0
+      internalID: -605379920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_24
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 3674
+        width: 1080
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c61a86f76dec6143855284e43e556df
+      internalID: -1155051568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_25
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 3674
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc95c11bd06c3ae41936fc2c58da659e
+      internalID: -953767868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_26
+      rect:
+        serializedVersion: 2
+        x: 5970
+        y: 3674
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd75f1d164ec19f4892afc7e67fb27d0
+      internalID: 1657969667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_27
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 2534
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f2bd51694d3af4ab68b2292edd6d14
+      internalID: 2091909717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_28
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 2534
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ff4c7139f705e40b943bf1051abf4a
+      internalID: -2122373505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_29
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 2534
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0e7f4064ca75f4e8fd00d73dc6b17d
+      internalID: 793364794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_30
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 2534
+        width: 1080
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c0fb04861f00040a2e1b863066ebae
+      internalID: 1306704997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_31
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 2534
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f37c5acb38fed54c85c7987dc4a5334
+      internalID: -1802276764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_32
+      rect:
+        serializedVersion: 2
+        x: 5970
+        y: 2534
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b0e11311ba21b46b7bb843972af5b0
+      internalID: 1229272980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_33
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1394
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a8abc575d00ed409d546a7362d0fb0
+      internalID: -677575157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_34
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 1394
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc4dcabc7424d544896c6dbae1694f2
+      internalID: -593456085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_35
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 1394
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b77c6f8fe7a43c46a880838fba5c045
+      internalID: -1068522646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_36
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 1394
+        width: 1080
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681af2f1b7b1b9f43aeda130906d733f
+      internalID: 2022675171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_37
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 1394
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9e608a5d30f8f47ab13af3189b4646
+      internalID: -1024449906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_38
+      rect:
+        serializedVersion: 2
+        x: 5970
+        y: 1394
+        width: 1084
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43035a628b5bef43b8e1d1554ae42e3
+      internalID: -136571549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_39
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 250
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e314fb318712ff428fc56e14ad65f9b
+      internalID: -1742586722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_40
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 250
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f2a33d9aa68d94497008d56e9216a6
+      internalID: -2120992706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_41
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 250
+        width: 1084
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a47254d13f1b944b06338443d8db76
+      internalID: -1933269832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly_Death_42
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 250
+        width: 1080
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5d82e0e68816e4789b50e22eb50a3a
+      internalID: 59595463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Fly_Death_0: -2044385349
+      Fly_Death_1: 719627198
+      Fly_Death_10: -1022829171
+      Fly_Death_11: 675008326
+      Fly_Death_12: -1885308554
+      Fly_Death_13: 1217299709
+      Fly_Death_14: 1281098936
+      Fly_Death_15: -1471216395
+      Fly_Death_16: -848708309
+      Fly_Death_17: 1228797051
+      Fly_Death_18: -1896034943
+      Fly_Death_19: 1580314213
+      Fly_Death_2: 1705852384
+      Fly_Death_20: -1518256190
+      Fly_Death_21: -1989021162
+      Fly_Death_22: -2041681812
+      Fly_Death_23: -605379920
+      Fly_Death_24: -1155051568
+      Fly_Death_25: -953767868
+      Fly_Death_26: 1657969667
+      Fly_Death_27: 2091909717
+      Fly_Death_28: -2122373505
+      Fly_Death_29: 793364794
+      Fly_Death_3: 619931126
+      Fly_Death_30: 1306704997
+      Fly_Death_31: -1802276764
+      Fly_Death_32: 1229272980
+      Fly_Death_33: -677575157
+      Fly_Death_34: -593456085
+      Fly_Death_35: -1068522646
+      Fly_Death_36: 2022675171
+      Fly_Death_37: -1024449906
+      Fly_Death_38: -136571549
+      Fly_Death_39: -1742586722
+      Fly_Death_4: -1271555906
+      Fly_Death_40: -2120992706
+      Fly_Death_41: -1933269832
+      Fly_Death_42: 59595463
+      Fly_Death_5: -830065284
+      Fly_Death_6: -2103874883
+      Fly_Death_7: 1423968257
+      Fly_Death_8: -68945620
+      Fly_Death_9: -1215500347
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
