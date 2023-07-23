@@ -4,56 +4,62 @@ using static UnityEngine.EventSystems.PointerEventData;
 
 public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    private RectTransform imageRectTransform;
-    private Vector2 originalPosition;
+    private RectTransform rectTransform;
+    private Vector2 itemLocation;
     private Vector2 offset;
-    private bool isMoving;
+
     [SerializeField] private GameManager.Actions actionType = GameManager.Actions.None;
     [SerializeField] private RectTransform region;
 
 
     private void Awake()
     {
-        imageRectTransform = GetComponent<RectTransform>();
-        originalPosition = imageRectTransform.anchoredPosition;
+        rectTransform = GetComponent<RectTransform>();
+        itemLocation = rectTransform.anchoredPosition;
     }
 
     private void Update()
     {
         // Gradually move the item back to its original position
-        if (!isMoving)
+        if (GameManager.instance.action != actionType)
         {
-            imageRectTransform.anchoredPosition = Vector2.Lerp(originalPosition, imageRectTransform.anchoredPosition, 0.95f);
+            rectTransform.anchoredPosition = Vector2.Lerp(itemLocation, rectTransform.anchoredPosition, 0.95f);
             return;
         }
         // Move the item the players position
         // TODO: Make compatiable for mobile use!!
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 newPosition = mousePosition - offset;
-        imageRectTransform.anchoredPosition = newPosition;
+        rectTransform.anchoredPosition = Vector2.Lerp(rectTransform.anchoredPosition, newPosition, 0.7f);
 
         // Change action type if item is in region
         if (RectTransformUtility.RectangleContainsScreenPoint(region, mousePosition))
-            GameManager.instance.action = actionType;
+            GameManager.instance.actioning = true;
+        else
+            GameManager.instance.actioning = false;
     }
 
     // On mouse click
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (eventData.button == InputButton.Left)
+        if (eventData.button == InputButton.Left && actionType != GameManager.instance.action)
         {
-            isMoving = true;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(imageRectTransform, eventData.position, eventData.pressEventCamera, out offset);
+            Debug.Log(this.name);
+            GameManager.instance.action = actionType;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, eventData.position, eventData.pressEventCamera, out offset);
+            if (actionType == GameManager.Actions.Attack)
+            {
+                Debug.Log("Check attacker and damage");
+            }
         }
     }
 
     // On mouse release
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (eventData.button == InputButton.Left)
+        if (eventData.button == InputButton.Left && actionType != GameManager.Actions.Attack)
         {
-            isMoving = false;
-            GameManager.instance.action = GameManager.Actions.None;
+            GameManager.instance.action = GameManager.Actions.Attack;
         }
     }
 }

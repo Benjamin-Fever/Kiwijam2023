@@ -23,17 +23,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        //Vector3 screenPos = new Vector3(Screen.Width / 2, Screen.height / 2, 0);
-        //Vector3 worldPos = Camera.main.ScreenToWorldSpace(screenPos);
-        //transform.position = Spawner;
-        //move spawner
-        float distanceFromPlayer = Vector2.Distance(target.position, transform.position);
-        if (distanceFromPlayer > minDistance)
-        {
-            //transform.position = Vector2.MoveTowards(this.transform.position, target.position, speed * Time.deltaTime);
-            transform.Translate(Vector2.up * speed * Time.deltaTime);
-        }
-
+        transform.position = new Vector3(target.position.x + 5, target.position.y + 5, 0);
     }
 
     private IEnumerator Spawner()

@@ -1,11 +1,13 @@
 using UnityEngine;
 using Unity.Mathematics;
+using System;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager manager = null;
+    private static GameManager manager;
     public static GameManager instance { get { return manager; } }
     public enum Actions { Blocksun, Attack, Water, None };
+    [NonSerialized] public bool actioning = false;
 
     [Header("Health")]
     [SerializeField] private int health = 100;
@@ -59,12 +61,28 @@ public class GameManager : MonoBehaviour
 
     private void sunlightChange()
     {
-        sunLevel = action == Actions.Blocksun ? sunLevel - 2 : sunLevel + 1;
+        int change = 0;
+        float difference = Mathf.Abs((float)waterLevel / maxWaterLevel) - ((float)sunLevel / maxSunLevel);
+        if (difference <= 0.2) { change = 1; }
+        else if (difference <= 0.4) { change = 3; }
+        else if (difference <= 0.6) { change = 5; }
+        else if (difference <= 0.8) { change = 8; }
+
+        if (action == Actions.Blocksun && actioning) { change = -3; }
+        sunLevel += change;
     }
 
     private void waterLevelChange()
     {
-        waterLevel = action == Actions.Water ? waterLevel + 5 : waterLevel - 1;
+        int change = 0;
+        float difference = ((float)waterLevel / maxWaterLevel) - ((float)sunLevel / maxSunLevel);
+        if (difference <= 0.2) { change = -1; }
+        else if (difference <= 0.4) { change = -3; }
+        else if (difference <= 0.6) { change = -5; }
+        else if (difference <= 0.8) { change = -8; }
+
+        if (action == Actions.Water && actioning) { change = 3; }
+        waterLevel += change;
     }
 
     private void statDmgChange()
@@ -91,8 +109,6 @@ public class GameManager : MonoBehaviour
     {
         float sunPercentage = (float)sunLevel / maxSunLevel * 100;
         float waterPercentage = (float)waterLevel / maxWaterLevel * 100;
-        Debug.Log("Sun Percentage: " + sunPercentage);
-        Debug.Log("Water Percentage: " + waterPercentage);
         if (sunPercentage >= 40 && sunPercentage <= 60 && waterPercentage >= 40 && waterPercentage <= 60)
         {
             PlantController.instance.growPlant();
