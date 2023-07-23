@@ -30,7 +30,7 @@ public class PlantController : MonoBehaviour
         GameObject stemObj = new GameObject();
         stemObj.AddComponent<SpriteRenderer>().sprite = vines[0];
         stemObj.transform.parent = transform.GetChild(0).GetChild(0);
-        stemObj.transform.position = new Vector3(flower.transform.parent.position.x, flower.transform.parent.position.y + 3.5f, -0.01f);
+        stemObj.transform.position = new Vector3(flower.transform.parent.position.x, flower.transform.parent.position.y + 3.5f, 0f);
         stemObj.transform.localScale = Vector3.one;
         flower.transform.position = new Vector3(flower.transform.position.x, flower.transform.position.y + 3.5f, flower.transform.position.z);
         flower.parent.GetComponent<SpriteRenderer>().sprite = vines[Random.Range(1, 12)];

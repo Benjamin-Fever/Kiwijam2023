@@ -34,7 +34,9 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
         // Change action type if item is in region
         if (RectTransformUtility.RectangleContainsScreenPoint(region, mousePosition))
-            GameManager.instance.action = actionType;
+            GameManager.instance.actioning = true;
+        else
+            GameManager.instance.actioning = false;
     }
 
     // On mouse click

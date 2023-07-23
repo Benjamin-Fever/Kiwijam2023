@@ -1,11 +1,13 @@
 using UnityEngine;
 using Unity.Mathematics;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager manager;
     public static GameManager instance { get { return manager; } }
     public enum Actions { Blocksun, Attack, Water, None };
+    [NonSerialized] public bool actioning = false;
 
     [Header("Health")]
     [SerializeField] private int health = 100;
@@ -66,7 +68,7 @@ public class GameManager : MonoBehaviour
         else if (difference <= 0.6) { change = 5; }
         else if (difference <= 0.8) { change = 8; }
 
-        if (action == Actions.Blocksun) { change = -3; }
+        if (action == Actions.Blocksun && actioning) { change = -3; }
         sunLevel += change;
     }
 
@@ -79,7 +81,7 @@ public class GameManager : MonoBehaviour
         else if (difference <= 0.6) { change = -5; }
         else if (difference <= 0.8) { change = -8; }
 
-        if (action == Actions.Water) { change = 3; }
+        if (action == Actions.Water && actioning) { change = 3; }
         waterLevel += change;
     }
 
