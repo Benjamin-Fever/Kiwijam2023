@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
     {
         int change = 0;
         float difference = Mathf.Abs((float)waterLevel / maxWaterLevel) - ((float)sunLevel / maxSunLevel);
-        Debug.Log(difference);
         if (difference <= 0.2) { change = 1; }
         else if (difference <= 0.4) { change = 3; }
         else if (difference <= 0.6) { change = 5; }
