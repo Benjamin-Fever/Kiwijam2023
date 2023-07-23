@@ -186,9 +186,10 @@ public class GameManager : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        worldPosition.z = 0;
         attackZone.position = worldPosition;
         swat.sprite = swatImg2;
-        Invoke(nameof(moveAttack), 0.25f);
+        Invoke(nameof(moveAttack), 0.1f);
     }
 
     private void moveAttack()

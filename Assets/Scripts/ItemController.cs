@@ -12,11 +12,10 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     [SerializeField] private GameManager.Actions actionType = GameManager.Actions.None;
     [SerializeField] private RectTransform region;
     [SerializeField] private RectTransform attackPosition;
-    [SerializeField] private Image wateringCan;
+
     [SerializeField] private Sprite wateringCanImg1;
     [SerializeField] private Sprite wateringCanImg2;
 
-    [SerializeField] private Image umbrella;
     [SerializeField] private Sprite umbrellaImg1;
     [SerializeField] private Sprite umbrellaImg2;
 
@@ -56,17 +55,17 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         {
             GameManager.instance.actioning = true;
             if (actionType == GameManager.Actions.Water)
-                wateringCan.sprite = wateringCanImg2;
+                GetComponent<Image>().sprite = wateringCanImg2;
             else if (actionType == GameManager.Actions.Blocksun)
-                umbrella.sprite = umbrellaImg2;
+                GetComponent<Image>().sprite = umbrellaImg2;
         }
         else
         {
             GameManager.instance.actioning = false;
             if (actionType == GameManager.Actions.Water)
-                wateringCan.sprite = wateringCanImg1;
+                GetComponent<Image>().sprite = wateringCanImg1;
             else if (actionType == GameManager.Actions.Blocksun)
-                umbrella.sprite = umbrellaImg1;
+                GetComponent<Image>().sprite = umbrellaImg1;
         }
     }
 
@@ -86,6 +85,10 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         if (eventData.button == InputButton.Left && actionType != GameManager.Actions.Attack)
         {
             GameManager.instance.action = GameManager.Actions.Attack;
+            if (actionType == GameManager.Actions.Water)
+                GetComponent<Image>().sprite = wateringCanImg1;
+            else if (actionType == GameManager.Actions.Blocksun)
+                GetComponent<Image>().sprite = umbrellaImg1;
         }
     }
 

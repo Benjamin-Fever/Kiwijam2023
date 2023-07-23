@@ -48,3 +48,6 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 964737641289825900, guid: 4cc0323708cda58478e0aa220747ebf1, type: 3}
   canSpawn: 1
+  minDistance: 3
+  speed: 2
+  target: {fileID: 0}

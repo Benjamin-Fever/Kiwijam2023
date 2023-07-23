@@ -1,18 +1,19 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class AttackDetect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        Debug.Log("adsdfasd");
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider collision)
     {
-        
+        Debug.Log("adasd");
+        EnemyHealth health = collision.gameObject.GetComponent<EnemyHealth>();
+        health.currentHealth--;
+        if (health.currentHealth <= 0)
+            Destroy(collision.gameObject);
     }
 }
