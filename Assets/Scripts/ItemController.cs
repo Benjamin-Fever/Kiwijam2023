@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using static UnityEngine.EventSystems.PointerEventData;
 
 public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
@@ -10,6 +11,13 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     [SerializeField] private GameManager.Actions actionType = GameManager.Actions.None;
     [SerializeField] private RectTransform region;
+    [SerializeField] private RectTransform attackPosition;
+
+    [SerializeField] private Sprite wateringCanImg1;
+    [SerializeField] private Sprite wateringCanImg2;
+
+    [SerializeField] private Sprite umbrellaImg1;
+    [SerializeField] private Sprite umbrellaImg2;
 
 
     private void Awake()
@@ -28,15 +36,37 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         }
         // Move the item the players position
         // TODO: Make compatiable for mobile use!!
+        if (actionType == GameManager.Actions.Attack)
+            offset = new Vector2(50, 200);
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 newPosition = mousePosition - offset;
         rectTransform.anchoredPosition = Vector2.Lerp(rectTransform.anchoredPosition, newPosition, 0.7f);
 
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            if (actionType == GameManager.Actions.Attack)
+            {
+                GameManager.instance.attack();
+            }
+        }
+
         // Change action type if item is in region
         if (RectTransformUtility.RectangleContainsScreenPoint(region, mousePosition))
+        {
             GameManager.instance.actioning = true;
+            if (actionType == GameManager.Actions.Water)
+                GetComponent<Image>().sprite = wateringCanImg2;
+            else if (actionType == GameManager.Actions.Blocksun)
+                GetComponent<Image>().sprite = umbrellaImg2;
+        }
         else
+        {
             GameManager.instance.actioning = false;
+            if (actionType == GameManager.Actions.Water)
+                GetComponent<Image>().sprite = wateringCanImg1;
+            else if (actionType == GameManager.Actions.Blocksun)
+                GetComponent<Image>().sprite = umbrellaImg1;
+        }
     }
 
     // On mouse click
@@ -44,13 +74,8 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     {
         if (eventData.button == InputButton.Left && actionType != GameManager.instance.action)
         {
-            Debug.Log(this.name);
             GameManager.instance.action = actionType;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, eventData.position, eventData.pressEventCamera, out offset);
-            if (actionType == GameManager.Actions.Attack)
-            {
-                Debug.Log("Check attacker and damage");
-            }
         }
     }
 
@@ -60,6 +85,20 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         if (eventData.button == InputButton.Left && actionType != GameManager.Actions.Attack)
         {
             GameManager.instance.action = GameManager.Actions.Attack;
+            if (actionType == GameManager.Actions.Water)
+                GetComponent<Image>().sprite = wateringCanImg1;
+            else if (actionType == GameManager.Actions.Blocksun)
+                GetComponent<Image>().sprite = umbrellaImg1;
         }
+    }
+
+    public Vector3 ConvertCanvasToWorldSpace(Vector2 canvasPosition)
+    {
+
+
+        // Convert the screen position to a world space position
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(canvasPosition.x, canvasPosition.y, Camera.main.nearClipPlane));
+
+        return worldPosition;
     }
 }
