@@ -12,7 +12,6 @@ public class EnemyFollowFlower : MonoBehaviour
     private float nextFireTime;
     //reference the flower
     private Transform flower;
-    public GameManager flowerHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +31,7 @@ public class EnemyFollowFlower : MonoBehaviour
         else if (distanceFromPlayer <= attackRange && nextFireTime < Time.time)
         {
             //attack once in range, then wait for attack cooldown
-            //GameManager.SetHealth(damage);
+            GameManager.instance.AddHealth(damage);
             nextFireTime = Time.time + attackCooldown;
         }
     }
