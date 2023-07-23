@@ -1,6 +1,7 @@
 using UnityEngine;
 using Unity.Mathematics;
 using System;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +35,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private RectTransform healthBar;
     [SerializeField] private RectTransform sunBar;
     [SerializeField] private RectTransform waterBar;
+    [SerializeField] private Image swat;
+    [SerializeField] private Sprite swatImg1;
+    [SerializeField] private Sprite swatImg2;
+
+    [SerializeField] private Transform attackZone;
 
     private void Start()
     {
@@ -173,5 +179,21 @@ public class GameManager : MonoBehaviour
         CancelInvoke(nameof(statDmgChange));
         InvokeRepeating(nameof(statDmgChange), 0f, waterChangeRate);
 
+    }
+
+    public void attack()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane;
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        attackZone.position = worldPosition;
+        swat.sprite = swatImg2;
+        Invoke(nameof(moveAttack), 0.25f);
+    }
+
+    private void moveAttack()
+    {
+        attackZone.position = new Vector3(-20, 0);
+        swat.sprite = swatImg1;
     }
 }

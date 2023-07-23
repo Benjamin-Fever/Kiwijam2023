@@ -9,12 +9,13 @@ public class WateringCan : MonoBehaviour
     {
         if (GameManager.instance.actioning && GameManager.instance.action == GameManager.Actions.Water)
         {
-            particle.transform.position = Camera.main.ScreenToWorldPoint(transform.position);
+            RectTransform rectTransform = GetComponent<RectTransform>();
+            particle.transform.position = new Vector3(rectTransform.position.x / 200, rectTransform.position.y / 100, rectTransform.position.z / 100);
             particle.gameObject.SetActive(true);
         }
         else
         {
-            particle.gameObject.SetActive(false);
+            //particle.gameObject.SetActive(false);
         }
     }
 }
