@@ -3,7 +3,7 @@ using Unity.Mathematics;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager manager = null;
+    private static GameManager manager;
     public static GameManager instance { get { return manager; } }
     public enum Actions { Blocksun, Attack, Water, None };
 
@@ -59,12 +59,29 @@ public class GameManager : MonoBehaviour
 
     private void sunlightChange()
     {
-        sunLevel = action == Actions.Blocksun ? sunLevel - 2 : sunLevel + 1;
+        int change = 0;
+        float difference = Mathf.Abs((float)waterLevel / maxWaterLevel) - ((float)sunLevel / maxSunLevel);
+        Debug.Log(difference);
+        if (difference <= 0.2) { change = 1; }
+        else if (difference <= 0.4) { change = 3; }
+        else if (difference <= 0.6) { change = 5; }
+        else if (difference <= 0.8) { change = 8; }
+
+        if (action == Actions.Blocksun) { change = -3; }
+        sunLevel += change;
     }
 
     private void waterLevelChange()
     {
-        waterLevel = action == Actions.Water ? waterLevel + 5 : waterLevel - 1;
+        int change = 0;
+        float difference = ((float)waterLevel / maxWaterLevel) - ((float)sunLevel / maxSunLevel);
+        if (difference <= 0.2) { change = -1; }
+        else if (difference <= 0.4) { change = -3; }
+        else if (difference <= 0.6) { change = -5; }
+        else if (difference <= 0.8) { change = -8; }
+
+        if (action == Actions.Water) { change = 3; }
+        waterLevel += change;
     }
 
     private void statDmgChange()
