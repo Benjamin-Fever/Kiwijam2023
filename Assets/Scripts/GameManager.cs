@@ -109,8 +109,6 @@ public class GameManager : MonoBehaviour
     {
         float sunPercentage = (float)sunLevel / maxSunLevel * 100;
         float waterPercentage = (float)waterLevel / maxWaterLevel * 100;
-        Debug.Log("Sun Percentage: " + sunPercentage);
-        Debug.Log("Water Percentage: " + waterPercentage);
         if (sunPercentage >= 40 && sunPercentage <= 60 && waterPercentage >= 40 && waterPercentage <= 60)
         {
             PlantController.instance.growPlant();
