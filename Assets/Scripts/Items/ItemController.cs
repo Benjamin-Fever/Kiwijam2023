@@ -42,7 +42,7 @@ public class ItemController : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         Vector2 newPosition = mousePosition - offset;
         rectTransform.anchoredPosition = Vector2.Lerp(rectTransform.anchoredPosition, newPosition, 0.7f);
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (actionType == GameManager.Actions.Attack)
             {

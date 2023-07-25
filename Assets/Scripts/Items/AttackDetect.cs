@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class AttackDetect : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("adsdfasd");
-    }
-    private void OnTriggerEnter(Collider collision)
-    {
-        Debug.Log("adasd");
+    private void OnTriggerEnter2D(Collider2D collision) {
         EnemyHealth health = collision.gameObject.GetComponent<EnemyHealth>();
         health.currentHealth--;
         if (health.currentHealth <= 0)

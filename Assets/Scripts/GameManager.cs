@@ -2,6 +2,7 @@ using UnityEngine;
 using Unity.Mathematics;
 using System;
 using UnityEngine.UI;
+using UnityEditor.Rendering;
 
 public class GameManager : MonoBehaviour
 {
@@ -183,18 +184,25 @@ public class GameManager : MonoBehaviour
 
     public void attack()
     {
+        if (actioning) { return; }
+        actioning = true;
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         worldPosition.z = 0;
         attackZone.position = worldPosition;
         swat.sprite = swatImg2;
-        Invoke(nameof(moveAttack), 0.1f);
+        Invoke(nameof(moveAttack), 0.4f);
+        Invoke(nameof(swatAnim), 0.2f);
     }
 
     private void moveAttack()
     {
         attackZone.position = new Vector3(-20, 0);
+        actioning = false;
+    }
+
+    private void swatAnim() {
         swat.sprite = swatImg1;
     }
 }
