@@ -2,7 +2,6 @@ using UnityEngine;
 using Unity.Mathematics;
 using System;
 using UnityEngine.UI;
-using UnityEditor.Rendering;
 
 public class GameManager : MonoBehaviour
 {
